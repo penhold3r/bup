@@ -2,13 +2,16 @@ import './sass/index.scss'
 import domReady from './utils/dom-ready'
 
 domReady(() => {
+	const delay = window.outerWidth > 700 ? 5500 : 2100
+
 	modal()
-	landing()
 	form()
+
+	window.outerWidth > 700 && landing()
 
 	setTimeout(() => {
 		removeIntro()
-	}, 5500)
+	}, delay)
 })
 
 const modal = () => {
@@ -27,6 +30,7 @@ const removeIntro = () => {
 
 const landing = () => {
 	const dly = 5
+
 	gsap.from('.logo', { opacity: 0, duration: 0.5, delay: dly })
 	gsap.from('.lead', {
 		clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)',
@@ -35,7 +39,7 @@ const landing = () => {
 	})
 	gsap.from('.cta', { opacity: 0, y: 20, duration: 0.5, delay: dly + 1.5 })
 	gsap.from('.feat', { opacity: 0, x: 20, duration: 0.5, delay: dly + 2, stagger: 0.6 })
-	gsap.from('.footer', { opacity: 0, y: 20, duration: 0.5, delay: dly + 2.5 })
+	gsap.from('.footer', { opacity: 0, y: 20, duration: 0.5, delay: dly + 4.5 })
 }
 
 const form = () => {

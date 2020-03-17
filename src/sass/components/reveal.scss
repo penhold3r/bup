@@ -8,6 +8,10 @@
 	display: flex;
 	z-index: 999;
 
+	@include tablet {
+		animation: fade 1s ease-in-out 1s forwards;
+	}
+
 	&__panel {
 		position: absolute;
 		display: flex;
@@ -21,6 +25,10 @@
 			margin: auto;
 			width: 200px;
 			animation: logoDown 0.5s ease-in-out 1.5s forwards;
+
+			@include tablet {
+				animation: none;
+			}
 		}
 
 		&.left {
@@ -29,6 +37,10 @@
 			background: $dark;
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 			z-index: 1;
+
+			@include tablet {
+				animation: none;
+			}
 		}
 
 		&.right {
@@ -38,8 +50,16 @@
 			clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
 			z-index: 2;
 
+			@include tablet {
+				animation: none;
+			}
+
 			img {
 				animation: logoRight 0.75s ease-in-out 2s forwards;
+
+				@include tablet {
+					animation: none;
+				}
 			}
 		}
 	}
@@ -113,5 +133,15 @@
 
 	to {
 		transform: translateX(60vw);
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
 	}
 }

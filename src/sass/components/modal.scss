@@ -21,35 +21,42 @@
 	}
 
 	&__content {
+		border-left: 9px solid $primary;
 		background: #fff;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 		display: flex;
 		flex-direction: column;
 		margin: auto;
-		padding: 2rem;
+		padding: 3rem;
 		position: relative;
 		transform: translateY(50px);
 		transition: all 0.4s;
 		width: 100%;
 		max-width: 500px;
+		min-height: 500px;
 
 		&__close {
+			background: $primary;
 			position: absolute;
 			padding: 0.5rem;
 			font-size: 2rem;
+			color: #fff;
 			cursor: pointer;
 			line-height: 0.5;
 			top: 0;
 			right: 0;
 
 			&:hover {
-				color: $primary;
+				background: $grey;
 			}
 		}
 
 		&__title {
 			color: $primary;
 			margin: 0 0 1rem;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 0.05rem;
 		}
 
 		&__form {
@@ -88,18 +95,18 @@
 			}
 
 			&__submit {
-				background: linear-gradient(45deg, $primary-light, $primary);
-				padding: 0.5rem 1rem;
-				border-radius: 3px;
+				background: $primary-light;
+				border: 1px solid $primary;
 				color: #fff;
-				border: none;
-				transition: all 0.4s;
-				letter-spacing: 0.05rem;
-				text-transform: uppercase;
 				cursor: pointer;
+				letter-spacing: 0.05rem;
+				margin: 2rem 0 0;
+				padding: 0.5rem 1rem;
+				text-transform: uppercase;
+				transition: all 0.4s;
 
 				&:hover {
-					background: linear-gradient(45deg, $grey, $dark);
+					background: $grey;
 				}
 			}
 		}

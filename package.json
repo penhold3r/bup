@@ -16,6 +16,7 @@
 		"sass": "^1.26.3"
 	},
 	"dependencies": {
-		"get-html-locale": "^1.0.2"
+		"get-html-locale": "^1.0.2",
+		"is-mobile": "^2.2.1"
 	}
 }
