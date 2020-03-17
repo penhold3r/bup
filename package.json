@@ -1,0 +1,21 @@
+{
+	"name": "b-up",
+	"version": "1.0.0",
+	"description": "BUP landing page",
+	"main": "index.js",
+	"scripts": {
+		"start": "parcel src/index.html",
+		"build": "parcel build src/index.html"
+	},
+	"keywords": [],
+	"author": "penHolder Designerd <penhold3r@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"autoprefixer": "^9.7.4",
+		"parcel-bundler": "^1.12.4",
+		"sass": "^1.26.3"
+	},
+	"dependencies": {
+		"get-html-locale": "^1.0.2"
+	}
+}

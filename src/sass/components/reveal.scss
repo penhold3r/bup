@@ -1,0 +1,117 @@
+.reveal {
+	animation: slideRight 1s ease-in-out 3.5s forwards;
+	position: fixed;
+	height: 100vh;
+	width: 140vw;
+	left: -20vw;
+	top: 0;
+	display: flex;
+	z-index: 999;
+
+	&__panel {
+		position: absolute;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		transform: translateX(0);
+
+		img {
+			margin: auto;
+			width: 200px;
+			animation: logoDown 0.5s ease-in-out 1.5s forwards;
+		}
+
+		&.left {
+			animation: panelLeft 2.5s ease-in-out 1.25s forwards,
+				slidePanelLeft 1s ease-in-out 4.2s forwards;
+			background: $dark;
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			z-index: 1;
+		}
+
+		&.right {
+			animation: panelRight 1s ease-in-out 2s forwards,
+				slidePanelRight 1s ease-in-out 4.2s forwards;
+			background: $dark;
+			clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+			z-index: 2;
+
+			img {
+				animation: logoRight 0.75s ease-in-out 2s forwards;
+			}
+		}
+	}
+}
+
+@keyframes logoDown {
+	from {
+		transform: translateY(0);
+	}
+
+	to {
+		transform: translateY(5px);
+	}
+}
+
+@keyframes logoRight {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(100px);
+	}
+}
+
+@keyframes panelRight {
+	from {
+		background: $dark;
+		clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+	}
+
+	to {
+		background: $grey;
+		clip-path: polygon(60% 0, 100% 0, 100% 100%, 60% 100%);
+	}
+}
+
+@keyframes panelLeft {
+	from {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+
+	to {
+		clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+	}
+}
+
+@keyframes slideRight {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-20vw);
+	}
+}
+
+@keyframes slidePanelLeft {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-60vw);
+	}
+}
+@keyframes slidePanelRight {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(60vw);
+	}
+}
