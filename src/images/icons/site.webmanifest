@@ -9,6 +9,7 @@
 		}
 	],
 	"start_url": "/",
+	"orientation": "portrait",
 	"scope": "/",
 	"theme_color": "#1e9bd1",
 	"background_color": "#ffffff",
