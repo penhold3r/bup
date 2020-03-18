@@ -1,106 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
+	<head>
+		<title>B UP</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#1e9bd1" />
+		<meta name="msapplication-TileColor" content="#1e9bd1" />
+		<meta name="msapplication-config" content="../static/browserconfig.xml" />
+		<meta name="description" content="B-Up, Life places" />
+		<meta name="application-name" content="B-Up" />
+		<meta name="apple-mobile-web-app-title" content="B-Up" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta charset="UTF-8" />
+		<link rel="shortcut icon" href="../static/favicon.ico" />
+		<link rel="mask-icon" href="../static/safari-pinned-tab.svg" color="#1e9bd1" />
+		<link rel="manifest" href="../static/site.webmanifest" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../static/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="../static/favicon-16x16.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../static/apple-touch-icon.png" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
 
-   <head>
-      <title>B UP</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#1e9bd1" />
-      <meta name="msapplication-TileColor" content="#1e9bd1" />
-      <meta name="msapplication-config" content="./images/icons/browserconfig.xml" />
-      <meta name="description" content="B-Up, Life places" />
-      <meta name="application-name" content="B-Up" />
-      <meta name="apple-mobile-web-app-title" content="B-Up" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <meta charset="UTF-8" />
-      <link rel="shortcut icon" href="./images/icons/favicon.ico" />
-      <link rel="mask-icon" href="./images/icons/safari-pinned-tab.svg" color="#1e9bd1" />
-      <link rel="manifest" href="./images/icons/site.webmanifest" />
-      <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon.png" />
-      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&display=swap"
-         rel="stylesheet" />
-   </head>
+	<body>
+		<main class="main">
+			<div class="modal">
+				<div class="modal__content">
+					<span class="modal__content__close modal-close">&times;</span>
+					<h3 class="modal__content__title">Contacto</h3>
+					<form class="modal__content__form form">
+						<div class="input-block">
+							<label for="name" class="input-block__label">Nombre</label>
+							<input type="text" class="input-block__input input" name="name" />
+						</div>
+						<div class="input-block">
+							<label for="email" class="input-block__label">Email</label>
+							<input type="email" class="input-block__input input" name="email" />
+						</div>
+						<div class="input-block">
+							<label for="msg" class="input-block__label">Mensaje</label>
+							<textarea class="input-block__input input msg" name="msg"></textarea>
+						</div>
 
-   <body>
-      <main class="main">
-         <div class="modal">
-            <div class="modal__content">
-               <span class="modal__content__close modal-close">&times;</span>
-               <h3 class="modal__content__title">Contacto</h3>
-               <form class="modal__content__form form">
-                  <div class="input-block">
-                     <label for="name" class="input-block__label">Nombre</label>
-                     <input type="text" class="input-block__input input" name="name" />
-                  </div>
-                  <div class="input-block">
-                     <label for="email" class="input-block__label">Email</label>
-                     <input type="email" class="input-block__input input" name="email" />
-                  </div>
-                  <div class="input-block">
-                     <label for="msg" class="input-block__label">Mensaje</label>
-                     <textarea class="input-block__input input msg" name="msg"></textarea>
-                  </div>
+						<input type="submit" value="Enviar" class="modal__content__form__submit" />
+					</form>
+				</div>
+			</div>
 
-                  <input type="submit" value="Enviar" class="modal__content__form__submit" />
-               </form>
-            </div>
-         </div>
+			<div class="reveal">
+				<div class="reveal__panel left">
+					<img src="./images/b-up-logo_white.svg" alt="BUP" />
+				</div>
+				<div class="reveal__panel right">
+					<img src="./images/b-up-logo_white.svg" alt="BUP" />
+				</div>
+			</div>
 
-         <div class="reveal">
-            <div class="reveal__panel left">
-               <img src="./images/b-up-logo_white.svg" alt="BUP" />
-            </div>
-            <div class="reveal__panel right">
-               <img src="./images/b-up-logo_white.svg" alt="BUP" />
-            </div>
-         </div>
+			<header class="header">
+				<div class="header__left">
+					<h1 class="header__left__logo logo">
+						<img src="./images/b-up-logo.svg" alt="BUP" />
+					</h1>
 
-         <header class="header">
-            <div class="header__left">
-               <h1 class="header__left__logo logo">
-                  <img src="./images/b-up-logo.svg" alt="BUP" />
-               </h1>
+					<div class="header__left__lead lead">
+						<h2>Aseguramos tu inversión.<br />Impulsamos tu futuro.</h2>
+						<h3>Consultá nuestro equipo de espacialistas inmobiliarios.</h3>
+					</div>
 
-               <div class="header__left__lead lead">
-                  <h2>Aseguramos tu inversión.<br>Impulsamos tu futuro.</h2>
-                  <h3>Consultá nuestro equipo de espacialistas inmobiliarios.</h3>
-               </div>
+					<div class="header__left__cta cta">Contacto</div>
+				</div>
 
-               <div class="header__left__cta cta">Contacto</div>
-            </div>
+				<div class="header__right">
+					<p class="feat">Diseño</p>
+					<p class="feat">Construcción</p>
+					<p class="feat">Identidad</p>
+					<p class="feat">Garantía</p>
+				</div>
+			</header>
 
-            <div class="header__right">
-               <p class="feat">Diseño</p>
-               <p class="feat">Construcción</p>
-               <p class="feat">Identidad</p>
-               <p class="feat">Garantía</p>
-            </div>
-         </header>
+			<footer class="footer">
+				<div class="footer__contact-data">
+					<p>
+						<a
+							href="https://www.google.com/maps/place/Rufino Ortega 644, M5500 Mendoza"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Rufino Ortega 644, M5500 Mendoza
+						</a>
+					</p>
+					<p><a href="tel:+54 261 423 3449">+54 261 423 3449</a></p>
+					<p><a href="mailto:info@buildup.com.ar">info@buildup.com.ar</a></p>
+				</div>
+				<div class="footer__copy">
+					<small>BUP &copy; 2020</small>
+				</div>
+			</footer>
+		</main>
 
-         <footer class="footer">
-            <div class="footer__contact-data">
-               <p>
-                  <a href="https://www.google.com/maps/place/Rufino Ortega 644, M5500 Mendoza"
-                     target="_blank" rel="noopener noreferrer">
-                     Rufino Ortega 644, M5500 Mendoza
-                  </a>
-               </p>
-               <p><a href="tel:+54 261 423 3449">+54 261 423 3449</a></p>
-               <p><a href="mailto:hola@bup.com">hola@bup.com</a></p>
-            </div>
-            <div class="footer__copy">
-               <small>BUP &copy; 2020</small>
-            </div>
-         </footer>
-      </main>
+		<div class="img-bg">
+			<img src="./images/bup-background.jpg" alt="" />
+		</div>
 
-      <div class="img-bg">
-         <img src="./images/bup-background.jpg" alt="" />
-      </div>
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-      <script src="./main.js"></script>
-   </body>
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+		<script src="./main.js"></script>
+	</body>
 </html>

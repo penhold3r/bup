@@ -57,7 +57,7 @@ const form = () => {
 				successMsg: 'Mensaje enviado. Gracias!',
 				errorMsg: 'Hubo un error, intente más tarde.',
 				sending: 'Enviando...',
-				reciever: 'hola@bup.com'
+				reciever: 'info@buildup.com.ar'
 			}
 
 			submitFormData(form, settings)

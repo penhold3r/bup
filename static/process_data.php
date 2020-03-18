@@ -8,7 +8,7 @@
 
    $dest = isset( $data['dest'] )
       ? $data['dest']
-      : 'hello@world-mail.com';
+      : 'penhold3r@gmail.com';
 
    $headers = 'From: '. $name .'<'. $email .'>'. "\r\n";
    $headers .= 'X-Mailer: PHP5'. "\n";
