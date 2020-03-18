@@ -17,6 +17,8 @@
 	},
 	"dependencies": {
 		"get-html-locale": "^1.0.2",
-		"is-mobile": "^2.2.1"
+		"is-mobile": "^2.2.1",
+		"parcel-plugin-static-files-copy": "^2.3.1",
+		"submit-form-data": "^1.0.12"
 	}
 }

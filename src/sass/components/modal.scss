@@ -109,6 +109,18 @@
 					background: $grey;
 				}
 			}
+
+			.output-msg {
+				margin: 1rem 0 0;
+
+				.msg-error {
+					color: tomato;
+				}
+
+				.msg-ok {
+					color: lightgreen;
+				}
+			}
 		}
 	}
 }

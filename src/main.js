@@ -1,4 +1,5 @@
 import './sass/index.scss'
+import { submitFormData } from 'submit-form-data'
 import domReady from './utils/dom-ready'
 
 domReady(() => {
@@ -32,13 +33,14 @@ const landing = () => {
 	const dly = 5
 
 	gsap.from('.logo', { opacity: 0, duration: 0.5, delay: dly })
-	gsap.from('.lead', {
+	gsap.from('.lead h2', {
 		clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)',
 		duration: 1,
 		delay: dly + 0.5
 	})
-	gsap.from('.cta', { opacity: 0, y: 20, duration: 0.5, delay: dly + 1.5 })
-	gsap.from('.feat', { opacity: 0, x: 20, duration: 0.5, delay: dly + 2, stagger: 0.6 })
+	gsap.from('.feat', { opacity: 0, x: 20, duration: 0.5, delay: dly + 1, stagger: 0.6 })
+	gsap.from('.lead h3', { opacity: 0, y: 20, duration: 0.5, delay: dly + 3 })
+	gsap.from('.cta', { opacity: 0, y: 20, duration: 0.5, delay: dly + 3.5 })
 	gsap.from('.footer', { opacity: 0, y: 20, duration: 0.5, delay: dly + 4.5 })
 }
 
@@ -48,5 +50,16 @@ const form = () => {
 	form &&
 		form.addEventListener('submit', e => {
 			e.preventDefault()
+
+			const settings = {
+				dest: './process_data.php',
+				fields: '.input',
+				successMsg: 'Mensaje enviado. Gracias!',
+				errorMsg: 'Hubo un error, intente más tarde.',
+				sending: 'Enviando...',
+				reciever: 'hola@bup.com'
+			}
+
+			submitFormData(form, settings)
 		})
 }

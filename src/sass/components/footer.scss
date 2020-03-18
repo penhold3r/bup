@@ -1,5 +1,5 @@
 .footer {
-	background: rgba($dark, 0.7);
+	background: rgba($dark, 0.8);
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -14,9 +14,8 @@
 	&__contact-data {
 		display: flex;
 		justify-content: center;
-		margin: 1.5rem auto 1rem;
+		margin: 1rem auto 0.5rem;
 		max-width: fit-content;
-		border-left: 1px solid $primary-light;
 
 		@include tablet {
 			border: none;
@@ -37,8 +36,13 @@
 				padding: 1rem;
 			}
 
+			&:last-child {
+				border: none;
+			}
+
 			a {
 				color: #fff;
+				text-decoration: none;
 				text-underline-position: under;
 
 				@include tablet {
@@ -46,6 +50,7 @@
 				}
 
 				&:hover {
+					text-decoration: underline;
 					color: $primary-light;
 				}
 			}

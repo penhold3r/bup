@@ -18,9 +18,8 @@
 
 		&__logo {
 			grid-area: logo;
-			margin: auto 2rem 1rem auto;
-			width: 100px;
-			//opacity: 0;
+			margin: auto 2rem 2.5rem auto;
+			width: 105px;
 
 			@include tablet {
 				margin: 0 auto 2rem 0;
@@ -33,9 +32,8 @@
 		}
 
 		&__lead {
-			margin: 2rem 2rem 0 auto;
+			margin: 2.5rem 2rem 0 auto;
 			text-align: right;
-			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
 			@include tablet {
 				margin: 0 0 2rem;
@@ -43,6 +41,7 @@
 			}
 
 			h2 {
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 				color: darken($grey, 20%);
 				margin: 0 0 1rem;
 				max-width: 600px;
@@ -59,13 +58,12 @@
 
 		&__cta {
 			background: rgba($dark, 0.2);
-			border: 1px solid;
-			border-image-slice: 1;
-			border-image-source: linear-gradient(45deg, $primary, $primary-light);
+			border: 1px solid #fff;
 			color: #fff;
 			cursor: pointer;
 			display: inline-block;
 			letter-spacing: 0.05rem;
+			font-size: 0.7rem;
 			margin: 2rem 2rem auto auto;
 			padding: 0.5rem 1rem;
 			text-align: center;
