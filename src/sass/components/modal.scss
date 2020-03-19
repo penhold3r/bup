@@ -21,13 +21,14 @@
 	}
 
 	&__content {
-		border-left: 9px solid $primary;
+		//border-left: 9px solid $primary;
 		background: #fff;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		margin: auto;
-		padding: 3rem;
+		padding: 3rem 5rem;
 		position: relative;
 		transform: translateY(50px);
 		transition: all 0.4s;
@@ -36,15 +37,35 @@
 		min-height: 500px;
 
 		&__close {
-			background: $primary;
+			background: #fff;
 			position: absolute;
-			padding: 0.5rem;
-			font-size: 2rem;
-			color: #fff;
+			padding: 0.75rem;
+			transition: all 0.3s;
 			cursor: pointer;
 			line-height: 0.5;
 			top: 0;
 			right: 0;
+			width: 50px;
+			height: 50px;
+
+			&:before,
+			&:after {
+				background: $primary-light;
+				content: '';
+				display: block;
+				height: 1px;
+				position: relative;
+				transform-origin: center;
+				width: 100%;
+			}
+			&:before {
+				top: 11px;
+				transform: rotate(-45deg);
+			}
+			&:after {
+				top: 10px;
+				transform: rotate(45deg);
+			}
 
 			&:hover {
 				background: $grey;
@@ -95,7 +116,7 @@
 			}
 
 			&__submit {
-				background: $primary-light;
+				background: $grey;
 				border: 1px solid $primary;
 				color: #fff;
 				cursor: pointer;
@@ -106,7 +127,7 @@
 				transition: all 0.4s;
 
 				&:hover {
-					background: $grey;
+					background: $primary-light;
 				}
 			}
 

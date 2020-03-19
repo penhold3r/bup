@@ -3,8 +3,8 @@
 	gap: 1rem;
 	grid-gap: 1rem;
 	grid-template-columns: 1fr 1fr;
-	height: 100%;
-	margin: auto;
+	height: calc(100% - 60px);
+	margin: 0;
 	position: relative;
 	width: 100%;
 

@@ -3,17 +3,15 @@ import { submitFormData } from 'submit-form-data'
 import domReady from './utils/dom-ready'
 
 domReady(() => {
-	console.log('%c----------\nAll set!\n----------', 'color:#1e9bd1, font-weight:bold')
+	console.log('%c----------\nAll set!\n----------', 'color:#1e9bd1; font-weight:bold')
 
-	const mobileOrEdge = window.outerWidth > 700 || /Edge/.test(navigator.userAgent)
+	const mobileOrEdge = window.outerWidth > 700 || isEdge()
 	const delay = mobileOrEdge ? 5500 : 2100
 
 	modal()
 	form()
 
 	mobileOrEdge && landing()
-
-	mobileOrEdge && console.log('%c Microsoft Edge detected :(', 'color:#00a2ed, font-weight:bold')
 
 	setTimeout(() => {
 		removeIntro()
@@ -67,4 +65,12 @@ const form = () => {
 
 			submitFormData(form, settings)
 		})
+}
+
+const isEdge = () => {
+	const edge = /Edge/.test(navigator.userAgent)
+
+	edge && console.log('%cMicrosoft Edge detected :(', 'color:#1e9bd1; font-weight:bold')
+
+	return edge
 }
