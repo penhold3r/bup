@@ -3,14 +3,15 @@ import { submitFormData } from 'submit-form-data'
 import domReady from './utils/dom-ready'
 
 domReady(() => {
-	const delay = window.outerWidth > 700 ? 5500 : 2100
+   const mobileOrEdge = window.outerWidth > 700 || /Edge/.test(navigator.userAgent)
+	const delay = mobileOrEdge ? 5500 : 2100
 
 	modal()
 	form()
 
-	window.outerWidth > 700 && landing()
+	mobileOrEdge && landing()
 
-	if (/Edge/.test(navigator.userAgent)) {
+	if () {
 		console.log('Hello Microsoft User!')
 	}
 
