@@ -3,7 +3,7 @@ import { submitFormData } from 'submit-form-data'
 import domReady from './utils/dom-ready'
 
 domReady(() => {
-   const mobileOrEdge = window.outerWidth > 700 || /Edge/.test(navigator.userAgent)
+	const mobileOrEdge = window.outerWidth > 700 || /Edge/.test(navigator.userAgent)
 	const delay = mobileOrEdge ? 5500 : 2100
 
 	modal()
@@ -11,9 +11,7 @@ domReady(() => {
 
 	mobileOrEdge && landing()
 
-	if () {
-		console.log('Hello Microsoft User!')
-	}
+	mobileOrEdge && console.log('Microsoft Edge detected :(')
 
 	setTimeout(() => {
 		removeIntro()
