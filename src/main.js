@@ -40,8 +40,8 @@ const landing = () => {
 	})
 	gsap.from('.feat', { opacity: 0, x: 20, duration: 0.5, delay: dly + 1, stagger: 0.6 })
 	gsap.from('.lead h3', { opacity: 0, y: 20, duration: 0.5, delay: dly + 3 })
-	gsap.from('.cta', { opacity: 0, y: 20, duration: 0.5, delay: dly + 3.5 })
-	gsap.from('.footer', { opacity: 0, y: 20, duration: 0.5, delay: dly + 4.5 })
+	gsap.from('.cta', { opacity: 0, y: 20, duration: 0.5, delay: dly + 3.2 })
+	gsap.from('.footer', { opacity: 0, duration: 0.5, delay: dly + 4.5 })
 }
 
 const form = () => {
