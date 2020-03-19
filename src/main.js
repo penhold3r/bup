@@ -10,6 +10,10 @@ domReady(() => {
 
 	window.outerWidth > 700 && landing()
 
+	if (/Edge/.test(navigator.userAgent)) {
+		console.log('Hello Microsoft User!')
+	}
+
 	setTimeout(() => {
 		removeIntro()
 	}, delay)

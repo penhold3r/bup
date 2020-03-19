@@ -25,6 +25,11 @@
 	}
 }
 
+@mixin ms-edge {
+	@supports (-ms-ime-align: auto) {
+		@content;
+	}
+}
 /* ---------------------------------------
 *
 * Media queries

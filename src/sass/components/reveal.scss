@@ -12,6 +12,10 @@
 		animation: fade 1s ease-in-out 1s forwards;
 	}
 
+	@include ms-edge {
+		animation: fade 1s ease-in-out 1s forwards;
+	}
+
 	&__panel {
 		position: absolute;
 		display: flex;
@@ -29,6 +33,9 @@
 			@include tablet {
 				animation: none;
 			}
+			@include ms-edge {
+				animation: none;
+			}
 		}
 
 		&.left {
@@ -39,6 +46,9 @@
 			z-index: 1;
 
 			@include tablet {
+				animation: none;
+			}
+			@include ms-edge {
 				animation: none;
 			}
 		}
@@ -53,11 +63,17 @@
 			@include tablet {
 				animation: none;
 			}
+			@include ms-edge {
+				animation: none;
+			}
 
 			img {
 				animation: logoRight 0.75s ease-in-out 2s forwards;
 
 				@include tablet {
+					animation: none;
+				}
+				@include ms-edge {
 					animation: none;
 				}
 			}
