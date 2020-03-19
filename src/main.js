@@ -11,7 +11,7 @@ domReady(() => {
 
 	mobileOrEdge && landing()
 
-	mobileOrEdge && console.log('Microsoft Edge detected :(')
+	mobileOrEdge && console.log('%c Microsoft Edge detected :(', 'color:#00a2ed, font-weight:bold')
 
 	setTimeout(() => {
 		removeIntro()
