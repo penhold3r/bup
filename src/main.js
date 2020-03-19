@@ -3,6 +3,8 @@ import { submitFormData } from 'submit-form-data'
 import domReady from './utils/dom-ready'
 
 domReady(() => {
+	console.log('%c ----------\nAll set!\n----------', 'color:#1e9bd1, font-weight:bold')
+
 	const mobileOrEdge = window.outerWidth > 700 || /Edge/.test(navigator.userAgent)
 	const delay = mobileOrEdge ? 5500 : 2100
 
